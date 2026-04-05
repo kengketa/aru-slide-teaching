@@ -379,6 +379,74 @@ def generate_slides(parts):
         color: #7f848e;
         font-style: italic;
     }
+
+    /* Mobile Responsiveness */
+    @media (max-width: 768px) {
+        header {
+            padding: 1.5rem 1rem;
+        }
+
+        .day-title {
+            font-size: 1.1rem;
+        }
+
+        main {
+            padding: 1rem;
+        }
+
+        .slide-container {
+            padding: 2rem 1.5rem;
+            border-radius: 12px;
+        }
+
+        h1 {
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .info-container {
+            flex-direction: column-reverse;
+            gap: 1.5rem;
+            padding: 1.5rem;
+            text-align: center;
+        }
+
+        .info-text {
+            font-size: 1rem;
+        }
+
+        .info-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto;
+        }
+
+        .command-container {
+            padding: 1rem;
+        }
+
+        .command-text {
+            font-size: 0.9rem;
+        }
+
+        .nav-buttons {
+            padding: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 0.6rem 1rem;
+            font-size: 0.8rem;
+            flex: 1;
+            justify-content: center;
+        }
+
+        .index-grid {
+            grid-template-columns: 1fr;
+            padding: 1rem;
+            gap: 1rem;
+        }
+    }
     """
 
     all_slides = []
