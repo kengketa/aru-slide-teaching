@@ -1,0 +1,77 @@
+Part 1: พัฒนา Website ด้วย Laravel, Docker และ Git (8-10 เม.ย. 69)
+
+วันที่ 1: Mastering Git & Docker Essentials
+
+Slide 1: Why we use git?
+Slide 2: Git Configuration: การตั้งค่า user.name และ email รวมถึงการสร้าง SSH Key สำหรับเชื่อมต่อ Server
+Slide 3: Git Lifecycle: เจาะลึกสถานะของไฟล์ (Untracked, Unmodified, Modified, Staged) และคำสั่ง git init, git status
+Slide 4: Committing Changes: หลักการเขียน Commit Message ที่ดี และการใช้ git add, git commit
+Slide 5: The Power of .gitignore: วิธีระบุไฟล์ที่ไม่ควรขึ้น Git เช่น /vendor, .env, และโฟลเดอร์เก็บ Log
+Slide 6: Remote Collaboration: การทำงานร่วมกับ GitHub/GitLab ผ่าน git clone, git push, และ git pull
+Slide 7: Introduction to Docker: ทำไมต้อง Container? เปรียบเทียบประสิทธิภาพและความแตกต่างกับ Virtual Machine
+Slide 8: Docker Architecture: ทำความเข้าใจ Image (พิมพ์เขียว) vs Container (เครื่องที่ทำงานจริง) และการจัดการ Storage ด้วย Volume
+Slide 9: Essential Docker Commands: ฝึกใช้ docker run, ps, exec, stop เพื่อควบคุม Container
+Slide 10: Docker Compose Workshop: สร้าง Environment แรกด้วย docker-compose.yml สำหรับรัน PHP และ MySQL
+วันที่ 2: Laravel Sail & Development Environment
+
+Slide 1: What is Laravel Sail?: แนะนำเครื่องมือ Docker อย่างเป็นทางการของ Laravel เพื่อลดความยุ่งยากในการลงโปรแกรม
+Slide 2: Installation: ขั้นตอนการติดตั้งโปรเจกต์ Laravel ใหม่ผ่าน Docker บนระบบปฏิบัติการต่างๆ
+Slide 3: Sail Anatomy: วิเคราะห์ไฟล์ docker-compose.yml ที่ Sail สร้างให้ เพื่อดูการเชื่อมต่อ Service ต่างๆ
+Slide 4: Command Shortcuts: การใช้ ./vendor/bin/sail และการตั้งค่า Alias เพื่อพิมพ์คำสั่งสั้นลง
+Slide 5: Environment Management: การใช้งานไฟล์ .env สำหรับจัดการรหัสผ่านและค่า Config ใน Container
+Slide 6: Expanding Services: วิธีเพิ่ม Redis สำหรับ Cache และ Mailpit สำหรับจำลองการส่ง Email
+Slide 7: Database Tooling: การเชื่อมต่อเครื่องมือภายนอก (เช่น TablePlus/PhpMyAdmin) เข้ากับฐานข้อมูลใน Docker
+Slide 8: Artisan & NPM: การรันคำสั่ง PHP Artisan และการจัดการ Frontend Assets ผ่าน Sail
+Slide 9: Debugging Pro: การอ่าน Error Logs และการใช้ Xdebug เพื่อตรวจสอบการทำงานของโค้ดทีละบรรทัด
+Slide 10: CRUD Workshop: ลงมือสร้างระบบจัดการข้อมูลเบื้องต้น เพื่อทดสอบความสมบูรณ์ของ Environment
+วันที่ 3: Advanced DB & Team Workflow
+
+Slide 1: Migration Concept: การใช้ Migration เพื่อควบคุมโครงสร้างฐานข้อมูลผ่าน Code แทนการใช้ SQL ตรงๆ
+Slide 2: Schema Design: การสร้างตารางและกำหนด Data Type ที่เหมาะสมผ่าน Laravel Migration
+Slide 3: Factories & Seeders: การสร้างข้อมูลจำลองนับพันรายการเพื่อใช้ในการทดสอบระบบ (Automated Data Seeding)
+Slide 4: DB Refreshing: คำสั่งสำหรับการล้างฐานข้อมูลและรันใหม่ (Refresh/Wipe) ใน Docker
+Slide 5: Git Branching Strategy: กลยุทธ์การแยก Branch เช่น Main (Production), Develop (Testing), และ Feature Branch
+Slide 6: Pull Request Workflow: ขั้นตอนการส่ง Code ให้เพื่อนร่วมงานรีวิว (Code Review) และการ Merge
+Slide 7: Handling Conflicts: วิธีแก้ไขเมื่อ Code ชนกัน (Merge Conflicts) และการใช้เครื่องมือช่วย Diff
+Slide 8: Team Simulation: แบ่งกลุ่มทำฟีเจอร์แยกกันแล้วนำมารวมกัน (Simulation Workshop)
+Slide 9: Dependency Management: ความสำคัญของไฟล์ Lock (composer.lock, package-lock.json) เมื่อทำงานหลายคน
+Slide 10: Background Jobs: การรัน Queue Worker ใน Docker เพื่อประมวลผลงานหนักๆ เบื้องหลัง
+Part 2: พัฒนา CMS ด้วย Laravel (27-29 เม.ย. 69)
+
+วันที่ 4: Frontend Development with Vue 3
+
+Slide 1: Modern CMS Landscape: วิเคราะห์แนวโน้มระบบจัดการเนื้อหา และความแตกต่างระหว่าง Headless vs Traditional
+Slide 2: UX/UI Review: การแกะแบบดีไซน์ (Design to Code) และการวางโครงสร้าง Component
+Slide 3: Vue 3 Setup: การติดตั้ง Vue 3 ในโปรเจกต์ Laravel และการเลือกใช้ Options API
+Slide 4: Tailwind CSS Integration: การตั้งค่า Tailwind เพื่อการเขียนสไตล์ที่รวดเร็วและเป็นระเบียบ
+Slide 5: Reusable Components: การสร้างปุ่ม, Input, และ Card เพื่อใช้ซ้ำทั่วทั้งระบบ CMS
+Slide 6: Master Layout: การสร้างโครงสร้างหลัก (Sidebar/Navbar) สำหรับระบบหลังบ้าน
+Slide 7: State Management: วิธีส่งผ่านข้อมูลระหว่างหน้าและจัดการสถานะของ UI เบื้องต้น
+Slide 8: Responsive Dashboard: การใช้ Tailwind Utilities เพื่อทำให้ระบบรองรับการใช้งานบน Tablet/Mobile
+Slide 9: Form Handling: การจัดการข้อมูลในฟอร์มและการส่งข้อมูลไปยัง Backend
+Slide 10: Workshop: สรุปการสร้างหน้า Dashboard แรกด้วย Vue และ Tailwind
+วันที่ 5: Backend API & Data Modeling
+
+Slide 1: Recap & CMS Goals: ทบทวนสิ่งที่ทำจากฝั่ง Frontend และตั้งเป้าหมายฝั่ง Backend
+Slide 2: Content Schema Design: ออกแบบตารางสำหรับบทความ, หมวดหมู่, และไฟล์สื่อ
+Slide 3: Database Relationships: การทำ One-to-Many และ Many-to-Many สำหรับ Content Tags
+Slide 4: Migration Mastery: การเขียน Migration ขั้นสูงและการทำ Soft Deletes
+Slide 5: Mass Data Generation: ใช้ Factory และ Faker เพื่อจำลองบทความจำนวนมากเพื่อดูความเร็วระบบ
+Slide 6: Eloquent Models: การตั้งค่า Model เพื่อจัดการข้อมูล CMS อย่างมีประสิทธิภาพ
+Slide 7: Intro to API Resources: วิธีการแปลงข้อมูลจากฐานข้อมูลเป็น JSON Format ให้ฝั่ง Frontend ใช้งานง่าย
+Slide 8: Data Transformation: การปรับแต่งโครงสร้าง JSON เช่น การเปลี่ยนชื่อ Column หรือซ่อนข้อมูลลับ
+Slide 9: Controller Logic: การแยก Logic การทำงานออกจาก Route เพื่อความสะอาดของโค้ด
+Slide 10: API Security: พื้นฐานการปกป้อง API ให้ปลอดภัยจากการเข้าถึงโดยไม่ได้รับอนุญาต
+วันที่ 6: Integration & Final Deployment
+
+Slide 1: API Integration: การใช้ Axios เชื่อมต่อ Vue 3 เข้ากับ Laravel API
+Slide 2: Full CRUD Flow: ขั้นตอนตั้งแต่กดปุ่ม "บันทึก" บน Vue ไปจนถึงการเขียนลงฐานข้อมูล MySQL
+Slide 3: Media Upload Logic: การจัดการไฟล์ภาพ และการเก็บไฟล์ลงใน Storage
+Slide 4: Media Library UI: การสร้างหน้าสำหรับเลือกภาพที่มีอยู่แล้วมาใช้งานใหม่
+Slide 5: Production Environment: ความต่างระหว่าง Docker สำหรับพัฒนา vs Docker สำหรับใช้งานจริง
+Slide 6: Optimized Docker Image: วิธีการเขียน Dockerfile ให้มีขนาดเล็กและทำงานได้เร็วที่สุด
+Slide 7: Nginx Configuration: การตั้งค่า Web Server เพื่อรองรับ Traffic และจัดการ SSL
+Slide 8: Deployment Workflow: ขั้นตอนการนำ Code ขึ้น Server และการอัปเดตระบบ
+Slide 9: Maintenance & Logs: การตรวจสอบสุขภาพของ Container บน Server จริง
+Slide 10: Course Summary & Q&A: สรุปบทเรียนทั้งหมดและตอบข้อซักถามสุดท้าย
+วิทยากร: นายสัจพงศ์ พงศ์ธีรโชติกุล

@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 5 - Slide 3</title>
+    <style>
+        
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Prompt:wght@300;400;600&display=swap');
+
+    :root {
+        --primary: #FF8C00;
+        --primary-light: #FFF4E5;
+        --secondary: #2D3436;
+        --white: #FFFFFF;
+        --gray-light: #F9FAFB;
+        --gray-medium: #E5E7EB;
+        --text-dark: #1F2937;
+        --text-muted: #6B7280;
+        --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Inter', 'Prompt', sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: var(--gray-light);
+        color: var(--text-dark);
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+        line-height: 1.6;
+    }
+
+    header {
+        background-color: var(--white);
+        padding: 2rem 1rem;
+        text-align: center;
+        border-bottom: 1px solid var(--gray-medium);
+        position: relative;
+    }
+
+    header::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        background: linear-gradient(90deg, var(--primary), #FFB142);
+    }
+
+    .header-content {
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    .part-title {
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        font-weight: 700;
+        color: var(--primary);
+        font-size: 0.875rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .day-title {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: var(--secondary);
+    }
+
+    main {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 2rem;
+        animation: fadeIn 0.8s ease-out;
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    .slide-container {
+        max-width: 960px;
+        width: 100%;
+        background-color: var(--white);
+        padding: 4rem;
+        border-radius: 20px;
+        box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05);
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .slide-container::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 8px;
+        background-color: var(--primary);
+    }
+
+    .slide-number {
+        font-size: 1rem;
+        color: var(--text-muted);
+        font-weight: 600;
+        margin-bottom: 2rem;
+        display: inline-block;
+        padding: 0.25rem 1rem;
+        background-color: var(--primary-light);
+        color: var(--primary);
+        border-radius: 9999px;
+    }
+
+    h1 {
+        font-size: 3rem;
+        margin-bottom: 2rem;
+        color: var(--text-dark);
+        font-weight: 700;
+        line-height: 1.2;
+    }
+
+    .nav-buttons {
+        padding: 2rem;
+        text-align: center;
+        background-color: var(--white);
+        border-top: 1px solid var(--gray-medium);
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .btn {
+        background-color: var(--white);
+        color: var(--text-dark);
+        border: 1px solid var(--gray-medium);
+        padding: 0.75rem 1.5rem;
+        border-radius: 10px;
+        cursor: pointer;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 0.875rem;
+        transition: var(--transition);
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .btn:hover {
+        border-color: var(--primary);
+        color: var(--primary);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(255, 140, 0, 0.15);
+    }
+
+    .btn-primary {
+        background-color: var(--primary);
+        color: var(--white);
+        border-color: var(--primary);
+    }
+
+    .btn-primary:hover {
+        background-color: #E67E00;
+        color: var(--white);
+    }
+
+    .btn.disabled {
+        opacity: 0.3;
+        cursor: not-allowed;
+        pointer-events: none;
+    }
+
+    footer {
+        padding: 1.5rem;
+        text-align: center;
+        font-size: 0.875rem;
+        color: var(--text-muted);
+        border-top: 1px solid var(--gray-medium);
+        background-color: var(--gray-light);
+    }
+
+    .index-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 2rem;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 2rem;
+    }
+
+    .day-card {
+        background: var(--white);
+        border-radius: 15px;
+        padding: 1.5rem;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        border-top: 5px solid var(--primary);
+        transition: var(--transition);
+    }
+
+    .day-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    }
+
+    .day-card h3 {
+        margin-top: 0;
+        color: var(--secondary);
+        font-size: 1.25rem;
+        border-bottom: 1px solid var(--gray-medium);
+        padding-bottom: 0.75rem;
+        margin-bottom: 1rem;
+    }
+
+    .slide-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .slide-list li {
+        margin-bottom: 0.5rem;
+    }
+
+    .slide-list a {
+        color: var(--text-dark);
+        text-decoration: none;
+        font-size: 0.9rem;
+        display: block;
+        padding: 0.5rem;
+        border-radius: 6px;
+        transition: var(--transition);
+    }
+
+    .slide-list a:hover {
+        background-color: var(--primary-light);
+        color: var(--primary);
+        padding-left: 0.75rem;
+    }
+
+    .part-section {
+        grid-column: 1 / -1;
+        margin-top: 2rem;
+    }
+
+    .part-badge {
+        background: var(--primary);
+        color: white;
+        padding: 0.5rem 1.5rem;
+        border-radius: 9999px;
+        display: inline-block;
+        font-weight: 700;
+        margin-bottom: 1rem;
+    }
+
+    .info-container {
+        display: flex;
+        align-items: center;
+        gap: 3rem;
+        text-align: left;
+        margin-top: 3rem;
+        padding: 2rem;
+        background: var(--gray-light);
+        border-radius: 15px;
+        border-left: 5px solid var(--primary);
+    }
+
+    .info-text {
+        flex: 1;
+        font-size: 1.25rem;
+        color: var(--text-dark);
+    }
+
+    .info-icon {
+        width: 120px;
+        height: 120px;
+        color: var(--primary);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .command-container {
+        margin-top: 2rem;
+        text-align: left;
+        background: #282c34;
+        border-radius: 10px;
+        padding: 1.5rem;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .command-header {
+        font-family: 'Inter', sans-serif;
+        font-size: 0.75rem;
+        color: #abb2bf;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        margin-bottom: 0.75rem;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .command-header::before {
+        content: '';
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        background: #ff5f56;
+        border-radius: 50%;
+        box-shadow: 15px 0 0 #ffbd2e, 30px 0 0 #27c93f;
+        margin-right: 35px;
+    }
+
+    .command-text {
+        font-family: 'Courier New', Courier, monospace;
+        color: #61afef;
+        font-size: 1.1rem;
+        margin: 0;
+        white-space: pre-wrap;
+    }
+
+    .command-comment {
+        color: #7f848e;
+        font-style: italic;
+    }
+    
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="part-title">พัฒนา CMS ด้วย Laravel (27-29 เม.ย. 69)</div>
+            <div class="day-title">วันที่ 5: Backend API & Data Modeling</div>
+        </div>
+    </header>
+    <main>
+        <div class="slide-container">
+            <span class="slide-number">Slide 3</span>
+            <h1>Database Relationships: การทำ One-to-Many และ Many-to-Many สำหรับ Content Tags</h1>
+
+            <div class="info-container">
+                <div class="info-text">
+                    Define Eloquent relationships: One-to-Many for categories and articles, and Many-to-Many for tagging systems.
+                </div>
+                <div class="info-icon">
+                    <svg width="100%" height="100%" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
+                        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                    </svg>
+                </div>
+            </div>
+
+            
+            <div class="command-container">
+                <div class="command-header">Example Commands</div>
+                <pre class="command-text"><span class="command-comment"># Test relationships in Tinker</span>
+sail artisan tinker --execute="$cat = Category::first(); $cat->posts;"
+
+<span class="command-comment"># Create migration for pivot table</span>
+sail artisan make:migration create_post_tag_table
+
+<span class="command-comment"># Define BelongsTo relationship</span>
+<span class="command-comment"># return $this->belongsTo(Category::class);</span>
+
+<span class="command-comment"># Eager load relationships</span>
+<span class="command-comment"># Post::with('category')->get();</span>
+
+<span class="command-comment"># Check relationship existence</span>
+<span class="command-comment"># $post->category()->exists();</span></pre>
+            </div>
+            
+        </div>
+    </main>
+    <div class="nav-buttons">
+        <a href="slide_5_2.html" class="btn ">
+            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+            Previous
+        </a>
+        <a href="../index.html" class="btn">
+            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+            Home
+        </a>
+        <a href="slide_5_4.html" class="btn btn-primary ">
+            Next
+            <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+        </a>
+    </div>
+    <footer>วิทยากร: นายสัจพงศ์ พงศ์ธีรโชติกุล | &copy; 2026 Seminar Series</footer>
+</body>
+</html>
