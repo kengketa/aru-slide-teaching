@@ -444,7 +444,22 @@ cd my-app
 ./vendor/bin/sail up -d
 
 <span class="command-comment"># Open app in browser</span>
-open http://localhost</pre>
+open http://localhost
+
+<span class="command-comment"># Open PHPMyAdmin (if installed)</span>
+open http://localhost:8080
+
+<span class="command-comment"># Stop all services</span>
+./vendor/bin/sail down
+
+<span class="command-comment"># Restart services</span>
+./vendor/bin/sail restart
+
+<span class="command-comment"># View version details</span>
+./vendor/bin/sail artisan --version
+
+<span class="command-comment"># Check node version in Sail</span>
+./vendor/bin/sail node -v</pre>
             </div>
             
         </div>

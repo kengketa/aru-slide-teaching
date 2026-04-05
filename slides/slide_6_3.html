@@ -444,7 +444,22 @@
 <span class="command-comment"># Storage::url('file.jpg');</span>
 
 <span class="command-comment"># Delete a file</span>
-<span class="command-comment"># Storage::delete('file.jpg');</span></pre>
+<span class="command-comment"># Storage::delete('file.jpg');</span>
+
+<span class="command-comment"># Get temporary URL (S3)</span>
+<span class="command-comment"># Storage::temporaryUrl('file.jpg', now()->addMinutes(5));</span>
+
+<span class="command-comment"># Download a file</span>
+<span class="command-comment"># return Storage::download('file.pdf');</span>
+
+<span class="command-comment"># Get file metadata</span>
+<span class="command-comment"># Storage::size('file.jpg');</span>
+
+<span class="command-comment"># Copy file between disks</span>
+<span class="command-comment"># Storage::disk('local')->copy('f1.txt', 'f2.txt');</span>
+
+<span class="command-comment"># List all files in directory</span>
+<span class="command-comment"># Storage::files('photos');</span></pre>
             </div>
             
         </div>

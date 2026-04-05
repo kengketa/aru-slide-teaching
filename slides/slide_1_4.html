@@ -444,7 +444,22 @@ git commit --amend
 git reset HEAD filename.php
 
 <span class="command-comment"># View changes in staged files</span>
-git diff --staged</pre>
+git diff --staged
+
+<span class="command-comment"># Commit all tracked changes</span>
+git commit -am "fix: typo in header"
+
+<span class="command-comment"># Revert a commit (creates new commit)</span>
+git revert <commit_hash>
+
+<span class="command-comment"># Show commit details</span>
+git show <commit_hash>
+
+<span class="command-comment"># List commit history (graph)</span>
+git log --graph --oneline --all
+
+<span class="command-comment"># Reset to previous commit (caution!)</span>
+<span class="command-comment"># git reset --hard <commit_hash></span></pre>
             </div>
             
         </div>

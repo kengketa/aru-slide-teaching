@@ -444,7 +444,22 @@ touch resources/js/stores/user.js
 sail npm run test:unit
 
 <span class="command-comment"># Check Pinia version</span>
-npm list pinia</pre>
+npm list pinia
+
+<span class="command-comment"># Initialize Pinia in main.js</span>
+<span class="command-comment"># app.use(createPinia())</span>
+
+<span class="command-comment"># Define a store (Composition style)</span>
+<span class="command-comment"># export const useUserStore = defineStore('user', () => { ... })</span>
+
+<span class="command-comment"># Use store in component</span>
+<span class="command-comment"># const store = useUserStore();</span>
+
+<span class="command-comment"># Reset store state</span>
+<span class="command-comment"># store.$reset();</span>
+
+<span class="command-comment"># Watch store changes</span>
+<span class="command-comment"># store.$subscribe((mutation, state) => { ... })</span></pre>
             </div>
             
         </div>

@@ -444,7 +444,22 @@ git fetch origin
 git diff main..feature/login-page
 
 <span class="command-comment"># Pull updates into current branch</span>
-git pull origin main</pre>
+git pull origin main
+
+<span class="command-comment"># Create pull request via GitHub CLI</span>
+gh pr create --title "Add login"
+
+<span class="command-comment"># List open pull requests</span>
+gh pr list
+
+<span class="command-comment"># Checkout a pull request locally</span>
+gh pr checkout 123
+
+<span class="command-comment"># View pull request status</span>
+gh pr status
+
+<span class="command-comment"># Merge pull request</span>
+gh pr merge</pre>
             </div>
             
         </div>

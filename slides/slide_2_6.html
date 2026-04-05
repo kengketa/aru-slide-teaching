@@ -444,7 +444,22 @@ open http://localhost:8025
 sail redis-cli ping
 
 <span class="command-comment"># Flush Redis cache</span>
-sail redis-cli flushall</pre>
+sail redis-cli flushall
+
+<span class="command-comment"># List all Redis keys</span>
+sail redis-cli keys "*"
+
+<span class="command-comment"># Monitor Redis in real-time</span>
+sail redis-cli monitor
+
+<span class="command-comment"># Check Redis info</span>
+sail redis-cli info
+
+<span class="command-comment"># Stop Redis service</span>
+sail stop redis
+
+<span class="command-comment"># View Redis logs</span>
+sail logs redis</pre>
             </div>
             
         </div>

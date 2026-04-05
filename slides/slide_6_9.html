@@ -444,7 +444,22 @@ top
 df -h
 
 <span class="command-comment"># Test app endpoint with curl</span>
-curl -I https://my-app.com</pre>
+curl -I https://my-app.com
+
+<span class="command-comment"># Monitor system logs</span>
+tail -f /var/log/syslog
+
+<span class="command-comment"># Check memory usage of PHP-FPM</span>
+ps aux | grep php-fpm
+
+<span class="command-comment"># Monitor active database connections</span>
+sail mysql -e "SHOW PROCESSLIST;"
+
+<span class="command-comment"># Check Laravel log file size</span>
+du -sh storage/logs/laravel.log
+
+<span class="command-comment"># Tail Laravel logs in real-time</span>
+tail -f storage/logs/laravel.log</pre>
             </div>
             
         </div>

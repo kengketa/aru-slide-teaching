@@ -444,7 +444,22 @@ npm install @vuelidate/core @vuelidate/validators
 <span class="command-comment"># Object.assign(state, initialState)</span>
 
 <span class="command-comment"># Watch data changes</span>
-<span class="command-comment"># watch(() => state.email, (newVal) => { ... })</span></pre>
+<span class="command-comment"># watch(() => state.email, (newVal) => { ... })</span>
+
+<span class="command-comment"># Multi-binding v-model</span>
+<span class="command-comment"># <custom-input v-model:title="state.title" /></span>
+
+<span class="command-comment"># Use reactive() for form state</span>
+<span class="command-comment"># const form = reactive({ name: '', email: '' });</span>
+
+<span class="command-comment"># Validate on blur</span>
+<span class="command-comment"># <input @blur="v$.name.$touch()" /></span>
+
+<span class="command-comment"># Show validation errors</span>
+<span class="command-comment"># <span v-if="v$.name.$error">Name is required</span></span>
+
+<span class="command-comment"># Set form to loading state during submit</span>
+<span class="command-comment"># const isLoading = ref(false);</span></pre>
             </div>
             
         </div>

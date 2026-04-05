@@ -444,7 +444,22 @@ sail npm run build
 <span class="command-comment"># Inspect > Console</span>
 
 <span class="command-comment"># Deploy assets to CDN/Storage</span>
-sail artisan storage:link</pre>
+sail artisan storage:link
+
+<span class="command-comment"># Check generated asset files</span>
+ls public/build/assets
+
+<span class="command-comment"># Clean build directory</span>
+rm -rf public/build
+
+<span class="command-comment"># Run Vite build with manifest</span>
+sail npm run build -- --manifest
+
+<span class="command-comment"># View Vite stats</span>
+sail npm run build -- --report
+
+<span class="command-comment"># Lint your code</span>
+sail npm run lint</pre>
             </div>
             
         </div>

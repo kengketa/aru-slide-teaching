@@ -444,7 +444,22 @@ git rebase --continue
 cat conflicting_file.php
 
 <span class="command-comment"># Mark file as resolved</span>
-git add resolved_file.php</pre>
+git add resolved_file.php
+
+<span class="command-comment"># Abort rebase</span>
+git rebase --abort
+
+<span class="command-comment"># Skip a commit during rebase</span>
+git rebase --skip
+
+<span class="command-comment"># Use mergetool (if configured)</span>
+git mergetool
+
+<span class="command-comment"># Show common ancestor</span>
+git merge-base branchA branchB
+
+<span class="command-comment"># Checkout version from 'ours' during conflict</span>
+git checkout --ours filename.php</pre>
             </div>
             
         </div>

@@ -444,7 +444,22 @@ sail artisan sanctum:install
 curl -H "Authorization: Bearer <token>" http://localhost/api/user
 
 <span class="command-comment"># Revoke user tokens</span>
-<span class="command-comment"># $user->tokens()->delete();</span></pre>
+<span class="command-comment"># $user->tokens()->delete();</span>
+
+<span class="command-comment"># Check if token has ability</span>
+<span class="command-comment"># $user->tokenCan('post:create')</span>
+
+<span class="command-comment"># Authenticate SPA (Session-based)</span>
+<span class="command-comment"># Ensure SANCTUM_STATEFUL_DOMAINS is set</span>
+
+<span class="command-comment"># List user tokens in Tinker</span>
+sail artisan tinker --execute="User::first()->tokens"
+
+<span class="command-comment"># Customizing token expiration</span>
+<span class="command-comment"># 'expiration' => 60</span>
+
+<span class="command-comment"># Refreshing tokens</span>
+<span class="command-comment"># (Client-side logic or new token generation)</span></pre>
             </div>
             
         </div>

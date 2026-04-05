@@ -436,15 +436,30 @@
 <span class="command-comment"># Windows: winget install --id Git.Git -e</span>
 <span class="command-comment"># Linux: sudo apt-get install git</span>
 
+<span class="command-comment"># Check Git version</span>
 git --version
-<span class="command-comment"># Check version</span>
 
-git help <command>
 <span class="command-comment"># Get help for a command</span>
+git help <command>
 
 <span class="command-comment"># Configure global identity</span>
 git config --global user.name "Name"
-git config --global user.email "email@example.com"</pre>
+git config --global user.email "email@example.com"
+
+<span class="command-comment"># Check global configuration</span>
+git config --global --list
+
+<span class="command-comment"># Set default editor (VS Code)</span>
+git config --global core.editor "code --wait"
+
+<span class="command-comment"># Enable colored output</span>
+git config --global color.ui auto
+
+<span class="command-comment"># List all aliases</span>
+git config --get-regexp alias
+
+<span class="command-comment"># Clear global config</span>
+<span class="command-comment"># git config --global --unset user.name</span></pre>
             </div>
             
         </div>

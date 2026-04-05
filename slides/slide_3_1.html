@@ -444,7 +444,22 @@ sail artisan migrate:rollback
 sail artisan migrate:status
 
 <span class="command-comment"># View migration SQL without running</span>
-sail artisan migrate --pretend</pre>
+sail artisan migrate --pretend
+
+<span class="command-comment"># Rollback and re-run all migrations</span>
+sail artisan migrate:refresh
+
+<span class="command-comment"># Re-run all migrations and seed</span>
+sail artisan migrate:fresh --seed
+
+<span class="command-comment"># Reset and re-run all migrations</span>
+sail artisan migrate:reset
+
+<span class="command-comment"># Run migrations for specific connection</span>
+sail artisan migrate --database=mysql_testing
+
+<span class="command-comment"># Create migration for specific table</span>
+sail artisan make:migration add_votes_to_users --table=users</pre>
             </div>
             
         </div>

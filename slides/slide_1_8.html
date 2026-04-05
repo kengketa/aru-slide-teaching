@@ -444,7 +444,22 @@ docker volume create my-data
 docker volume ls
 
 <span class="command-comment"># Inspect an image</span>
-docker inspect <image_id></pre>
+docker inspect <image_id>
+
+<span class="command-comment"># Pull an image</span>
+docker pull alpine
+
+<span class="command-comment"># Tag an image</span>
+docker tag image:old image:new
+
+<span class="command-comment"># Remove unused images</span>
+docker image prune
+
+<span class="command-comment"># History of an image</span>
+docker history <image_name>
+
+<span class="command-comment"># Remove a volume</span>
+docker volume rm my-data</pre>
             </div>
             
         </div>

@@ -444,7 +444,22 @@ docker exec -it web bash
 docker stop web
 
 <span class="command-comment"># Remove a container</span>
-docker rm -f web</pre>
+docker rm -f web
+
+<span class="command-comment"># View container logs</span>
+docker logs web
+
+<span class="command-comment"># Restart a container</span>
+docker restart web
+
+<span class="command-comment"># Pause a container</span>
+docker pause web
+
+<span class="command-comment"># Copy file from host to container</span>
+docker cp local_file.txt web:/var/www/html/
+
+<span class="command-comment"># List container processes</span>
+docker top web</pre>
             </div>
             
         </div>

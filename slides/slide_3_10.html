@@ -444,7 +444,22 @@ sail artisan queue:failed
 sail artisan queue:retry all
 
 <span class="command-comment"># Clear all failed jobs</span>
-sail artisan queue:flush</pre>
+sail artisan queue:flush
+
+<span class="command-comment"># Restart queue worker</span>
+sail artisan queue:restart
+
+<span class="command-comment"># List all failed jobs</span>
+sail artisan queue:list
+
+<span class="command-comment"># Run specific queue</span>
+sail artisan queue:work --queue=high,default
+
+<span class="command-comment"># Run job once</span>
+sail artisan queue:work --once
+
+<span class="command-comment"># Work on failed jobs individually</span>
+sail artisan queue:retry <id></pre>
             </div>
             
         </div>

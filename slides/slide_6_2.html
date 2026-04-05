@@ -443,7 +443,22 @@ sail artisan make:request StorePostRequest
 <span class="command-comment"># Send response from Laravel</span>
 <span class="command-comment"># return response()->json($post, 201);</span>
 
-<span class="command-comment"># Refresh Vue component data after save</span></pre>
+<span class="command-comment"># Refresh Vue component data after save</span>
+
+<span class="command-comment"># Handle validation errors in Vue</span>
+<span class="command-comment"># const errors = err.response.data.errors;</span>
+
+<span class="command-comment"># PUT/PATCH for updates</span>
+<span class="command-comment"># axios.patch(`/api/posts/${id}`, data)</span>
+
+<span class="command-comment"># DELETE a record</span>
+<span class="command-comment"># axios.delete(`/api/posts/${id}`)</span>
+
+<span class="command-comment"># Reset form after success</span>
+<span class="command-comment"># form.value = { ...initialValue };</span>
+
+<span class="command-comment"># Show success notification (Toast)</span>
+<span class="command-comment"># toast.success('Saved!');</span></pre>
             </div>
             
         </div>

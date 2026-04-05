@@ -444,7 +444,22 @@ cat docker-compose.yml
 ./vendor/bin/sail build --no-cache
 
 <span class="command-comment"># View docker-compose version</span>
-docker-compose --version</pre>
+docker-compose --version
+
+<span class="command-comment"># View service ports</span>
+docker-compose port mysql 3306
+
+<span class="command-comment"># Stop a specific service</span>
+./vendor/bin/sail stop mysql
+
+<span class="command-comment"># Start a specific service</span>
+./vendor/bin/sail up -d mysql
+
+<span class="command-comment"># Remove all containers and volumes</span>
+./vendor/bin/sail down -v
+
+<span class="command-comment"># Validate docker-compose file</span>
+docker-compose config</pre>
             </div>
             
         </div>

@@ -444,7 +444,22 @@ mysql -h 127.0.0.1 -P 3306 -u sail -p
 sail mysqldump db_name > dump.sql
 
 <span class="command-comment"># Import database dump</span>
-sail mysql db_name < dump.sql</pre>
+sail mysql db_name < dump.sql
+
+<span class="command-comment"># Create new database</span>
+sail mysql -e "CREATE DATABASE new_db;"
+
+<span class="command-comment"># Show table structure</span>
+sail mysql -e "DESCRIBE table_name;"
+
+<span class="command-comment"># Run SQL file</span>
+sail mysql db_name < schema.sql
+
+<span class="command-comment"># Show MySQL process list</span>
+sail mysql -e "SHOW PROCESSLIST;"
+
+<span class="command-comment"># Repair MySQL tables</span>
+sail mysqlcheck -u sail -p --repair db_name</pre>
             </div>
             
         </div>

@@ -444,7 +444,22 @@ sail artisan make:factory PostFactory
 sail artisan db:seed
 
 <span class="command-comment"># Test factory in Tinker</span>
-sail artisan tinker --execute="Post::factory()->count(5)->make()"</pre>
+sail artisan tinker --execute="Post::factory()->count(5)->make()"
+
+<span class="command-comment"># Create model and factory</span>
+sail artisan make:model Category -f
+
+<span class="command-comment"># Create factory with states</span>
+sail artisan make:factory UserFactory --model=User
+
+<span class="command-comment"># Run seeder in production (force)</span>
+sail artisan db:seed --force
+
+<span class="command-comment"># Run seeder for specific connection</span>
+sail artisan db:seed --database=mysql
+
+<span class="command-comment"># Generate hidden factory attributes</span>
+<span class="command-comment"># (Inside factory) 'password' => static::$password ??= Hash::make('password')</span></pre>
             </div>
             
         </div>

@@ -444,7 +444,22 @@ git clean -ndX
 git check-ignore -v filename.log
 
 <span class="command-comment"># Force add an ignored file</span>
-git add -f secret.env</pre>
+git add -f secret.env
+
+<span class="command-comment"># List all tracked files</span>
+git ls-files
+
+<span class="command-comment"># Remove files that should be ignored</span>
+git rm -r --cached .
+
+<span class="command-comment"># Ignore all .log files</span>
+echo "*.log" >> .gitignore
+
+<span class="command-comment"># Global gitignore file</span>
+git config --global core.excludesfile ~/.gitignore_global
+
+<span class="command-comment"># View .gitignore content</span>
+cat .gitignore</pre>
             </div>
             
         </div>

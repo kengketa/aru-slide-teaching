@@ -444,7 +444,25 @@ php artisan migrate --force
 php artisan optimize
 
 <span class="command-comment"># Restart queue workers</span>
-php artisan queue:restart</pre>
+php artisan queue:restart
+
+<span class="command-comment"># Cache views for production</span>
+php artisan view:cache
+
+<span class="command-comment"># Cache routes for production</span>
+php artisan route:cache
+
+<span class="command-comment"># Clear all caches (if needed)</span>
+php artisan cache:clear
+
+<span class="command-comment"># Check Laravel version on production</span>
+php artisan --version
+
+<span class="command-comment"># Maintenance mode (On)</span>
+php artisan down
+
+<span class="command-comment"># Maintenance mode (Off)</span>
+php artisan up</pre>
             </div>
             
         </div>

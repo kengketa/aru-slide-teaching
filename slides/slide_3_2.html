@@ -444,7 +444,22 @@ sail artisan db:wipe
 sail artisan migrate:reset
 
 <span class="command-comment"># Create migration for pivot table</span>
-sail artisan make:migration create_post_tag_table</pre>
+sail artisan make:migration create_post_tag_table
+
+<span class="command-comment"># Rollback specific number of steps</span>
+sail artisan migrate:rollback --step=2
+
+<span class="command-comment"># Refresh specific number of steps</span>
+sail artisan migrate:refresh --step=1
+
+<span class="command-comment"># Show migration status as JSON</span>
+sail artisan migrate:status --json
+
+<span class="command-comment"># Install migration repository table</span>
+sail artisan migrate:install
+
+<span class="command-comment"># Create migration to rename table</span>
+sail artisan make:migration rename_posts_to_articles</pre>
             </div>
             
         </div>

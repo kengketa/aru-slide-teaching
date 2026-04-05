@@ -444,7 +444,22 @@ docker-compose down
 docker-compose logs -f
 
 <span class="command-comment"># Build or rebuild services</span>
-docker-compose build</pre>
+docker-compose build
+
+<span class="command-comment"># List running images</span>
+docker-compose images
+
+<span class="command-comment"># Run command in service</span>
+docker-compose exec app php artisan list
+
+<span class="command-comment"># Restart services</span>
+docker-compose restart
+
+<span class="command-comment"># Stop services without removing</span>
+docker-compose stop
+
+<span class="command-comment"># Start services without rebuilding</span>
+docker-compose start</pre>
             </div>
             
         </div>

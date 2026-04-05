@@ -437,14 +437,29 @@ git config --list
 <span class="command-comment"># Generate SSH Key</span>
 ssh-keygen -t ed25519 -C "email@example.com"
 
+<span class="command-comment"># Start SSH agent</span>
+eval "$(ssh-agent -s)"
+
+<span class="command-comment"># Add SSH key to agent</span>
+ssh-add ~/.ssh/id_ed25519
+
+<span class="command-comment"># Copy SSH public key to clipboard (macOS)</span>
+pbcopy < ~/.ssh/id_ed25519.pub
+
 <span class="command-comment"># Test SSH connection to GitHub</span>
 ssh -T git@github.com
 
 <span class="command-comment"># Install SourceTree via winget (Windows)</span>
-winget install --id Atlassian.SourceTree -e
+winget install Atlassian.SourceTree
 
-<span class="command-comment"># Install SourceTree via brew (macOS)</span>
-brew install --cask sourcetree</pre>
+<span class="command-comment"># Check SSH key existence</span>
+ls -al ~/.ssh
+
+<span class="command-comment"># Remove SSH key</span>
+<span class="command-comment"># rm ~/.ssh/id_ed25519</span>
+
+<span class="command-comment"># Create SSH config file</span>
+touch ~/.ssh/config</pre>
             </div>
             
         </div>

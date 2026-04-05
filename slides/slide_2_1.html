@@ -444,7 +444,22 @@ php artisan sail:install
 ./vendor/bin/sail stop
 
 <span class="command-comment"># Check Sail version</span>
-./vendor/bin/sail --version</pre>
+./vendor/bin/sail --version
+
+<span class="command-comment"># Start Sail in background</span>
+./vendor/bin/sail up -d
+
+<span class="command-comment"># Check Sail status</span>
+./vendor/bin/sail ps
+
+<span class="command-comment"># View Sail logs</span>
+./vendor/bin/sail logs
+
+<span class="command-comment"># Rebuild Sail services</span>
+./vendor/bin/sail build
+
+<span class="command-comment"># Access Sail shell</span>
+./vendor/bin/sail shell</pre>
             </div>
             
         </div>

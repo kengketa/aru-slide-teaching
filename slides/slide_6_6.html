@@ -444,7 +444,22 @@ docker scan my-app:slim
 docker save my-app:slim > app.tar
 
 <span class="command-comment"># Import image from tar file</span>
-docker load < app.tar</pre>
+docker load < app.tar
+
+<span class="command-comment"># List image layers</span>
+docker history my-app:slim
+
+<span class="command-comment"># Remove all untagged images</span>
+docker rmi $(docker images -f "dangling=true" -q)
+
+<span class="command-comment"># Compare image sizes</span>
+docker images
+
+<span class="command-comment"># Compress image with Docker Slim</span>
+<span class="command-comment"># docker-slim build my-app:prod</span>
+
+<span class="command-comment"># Use Alpine base image for smallest size</span>
+<span class="command-comment"># FROM php:8.3-fpm-alpine</span></pre>
             </div>
             
         </div>

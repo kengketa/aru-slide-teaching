@@ -445,7 +445,22 @@ sail artisan tinker
 >>> dd(User::first());
 
 <span class="command-comment"># Monitor Laravel logs</span>
-sail shell -c "tail -f storage/logs/laravel.log"</pre>
+sail shell -c "tail -f storage/logs/laravel.log"
+
+<span class="command-comment"># Dump and continue (don't stop)</span>
+dump($user);
+
+<span class="command-comment"># Log message to file</span>
+Log::info('debug message');
+
+<span class="command-comment"># Print backtrace and die</span>
+dd(debug_backtrace());
+
+<span class="command-comment"># Dump variables to browser console</span>
+<span class="command-comment"># (Using Spatie Ray or Clockwork)</span>
+
+<span class="command-comment"># Clear log files</span>
+sail shell -c "truncate -s 0 storage/logs/laravel.log"</pre>
             </div>
             
         </div>

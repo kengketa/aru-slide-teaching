@@ -443,7 +443,23 @@ sail artisan make:controller MediaController
 <span class="command-comment"># Get all media via API</span>
 <span class="command-comment"># Media::all();</span>
 
-<span class="command-comment"># Use spatie/laravel-medialibrary package</span></pre>
+<span class="command-comment"># Use spatie/laravel-medialibrary package</span>
+<span class="command-comment"># sail composer require "spatie/laravel-medialibrary:^11.0.0"</span>
+
+<span class="command-comment"># Register media collection in model</span>
+<span class="command-comment"># public function registerMediaCollections(): void</span>
+
+<span class="command-comment"># Upload to library</span>
+<span class="command-comment"># $model->addMedia($file)->toMediaCollection('images');</span>
+
+<span class="command-comment"># Retrieve image URL</span>
+<span class="command-comment"># $model->getFirstMediaUrl('images', 'thumb');</span>
+
+<span class="command-comment"># Delete media from library</span>
+<span class="command-comment"># $media->delete();</span>
+
+<span class="command-comment"># Optimize images on upload</span>
+<span class="command-comment"># (Using Spatie's Image Optimizer)</span></pre>
             </div>
             
         </div>

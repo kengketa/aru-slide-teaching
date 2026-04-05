@@ -444,7 +444,22 @@ sudo apt-get install certbot python3-certbot-nginx
 sudo certbot --nginx
 
 <span class="command-comment"># Check Nginx access logs</span>
-tail -f /var/log/nginx/access.log</pre>
+tail -f /var/log/nginx/access.log
+
+<span class="command-comment"># Check Nginx error logs</span>
+tail -f /var/log/nginx/error.log
+
+<span class="command-comment"># Enable site in Nginx</span>
+ln -s /etc/nginx/sites-available/my-app /etc/nginx/sites-enabled/
+
+<span class="command-comment"># Restart Nginx service</span>
+sudo systemctl restart nginx
+
+<span class="command-comment"># Check Nginx status</span>
+sudo systemctl status nginx
+
+<span class="command-comment"># View active Nginx connections</span>
+netstat -an | grep :80 | wc -l</pre>
             </div>
             
         </div>

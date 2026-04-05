@@ -444,7 +444,22 @@ git checkout main
 git merge feature/login-page
 
 <span class="command-comment"># Delete local branch</span>
-git branch -d feature/login-page</pre>
+git branch -d feature/login-page
+
+<span class="command-comment"># Rename current branch</span>
+git branch -m new-name
+
+<span class="command-comment"># Delete remote branch</span>
+git push origin --delete feature/login-page
+
+<span class="command-comment"># List merged branches</span>
+git branch --merged
+
+<span class="command-comment"># List branches not merged yet</span>
+git branch --no-merged
+
+<span class="command-comment"># View branches with last commit info</span>
+git branch -v</pre>
             </div>
             
         </div>

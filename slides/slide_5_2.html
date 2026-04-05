@@ -444,7 +444,22 @@ sail artisan migrate:fresh
 sail artisan model:show Post
 
 <span class="command-comment"># List all database tables</span>
-sail mysql -e "SHOW TABLES;"</pre>
+sail mysql -e "SHOW TABLES;"
+
+<span class="command-comment"># Show column details</span>
+sail mysql -e "DESCRIBE posts;"
+
+<span class="command-comment"># Check table size</span>
+sail mysql -e "SELECT table_name, data_length FROM information_schema.tables WHERE table_schema = 'sail';"
+
+<span class="command-comment"># Create index migration</span>
+sail artisan make:migration add_index_to_posts_title
+
+<span class="command-comment"># Check database connection</span>
+sail artisan db:show
+
+<span class="command-comment"># List table indexes</span>
+sail mysql -e "SHOW INDEX FROM posts;"</pre>
             </div>
             
         </div>

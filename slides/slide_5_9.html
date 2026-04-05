@@ -444,7 +444,22 @@ mkdir -p app/Actions && touch app/Actions/CreatePostAction.php
 sail artisan test --filter=PostServiceTest
 
 <span class="command-comment"># List all services</span>
-find app/Services -name "*.php"</pre>
+find app/Services -name "*.php"
+
+<span class="command-comment"># Create a trait</span>
+touch app/Traits/Slugger.php
+
+<span class="command-comment"># Use trait in model</span>
+<span class="command-comment"># use Slugger;</span>
+
+<span class="command-comment"># Create a Repository class</span>
+touch app/Repositories/PostRepository.php
+
+<span class="command-comment"># Bind interface to implementation</span>
+<span class="command-comment"># $this->app->bind(PostInterface::class, PostRepository::class);</span>
+
+<span class="command-comment"># Check service provider registration</span>
+sail artisan about</pre>
             </div>
             
         </div>

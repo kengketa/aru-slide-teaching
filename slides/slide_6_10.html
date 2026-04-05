@@ -444,7 +444,22 @@ rm -rf storage/framework/views/*
 <span class="command-comment"># open index.html</span>
 
 <span class="command-comment"># Farewell command</span>
-exit</pre>
+exit
+
+<span class="command-comment"># Clear all Docker resources (caution!)</span>
+<span class="command-comment"># docker system prune -a --volumes</span>
+
+<span class="command-comment"># Check project version</span>
+cat package.json | grep version
+
+<span class="command-comment"># Show total commits in project</span>
+git rev-list --count HEAD
+
+<span class="command-comment"># List all seminar files</span>
+ls -R slides/
+
+<span class="command-comment"># Open seminar repository</span>
+open https://github.com/kengketa/aru-slide-teaching</pre>
             </div>
             
         </div>

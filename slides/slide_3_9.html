@@ -444,7 +444,22 @@ sail npm ci
 sail composer audit
 
 <span class="command-comment"># List installed packages</span>
-sail composer show</pre>
+sail composer show
+
+<span class="command-comment"># Update specific package</span>
+sail composer update vendor/package
+
+<span class="command-comment"># Check why a package is installed</span>
+sail composer why vendor/package
+
+<span class="command-comment"># List packages with licenses</span>
+sail composer license
+
+<span class="command-comment"># Validate composer.json</span>
+sail composer validate
+
+<span class="command-comment"># Clear composer cache</span>
+sail composer clear-cache</pre>
             </div>
             
         </div>

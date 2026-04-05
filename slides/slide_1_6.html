@@ -444,7 +444,22 @@ git push -u origin main
 git pull origin main
 
 <span class="command-comment"># List remote repositories</span>
-git remote -v</pre>
+git remote -v
+
+<span class="command-comment"># Remove a remote</span>
+git remote remove origin
+
+<span class="command-comment"># Change remote URL</span>
+git remote set-url origin <new_url>
+
+<span class="command-comment"># Fetch from remote (no merge)</span>
+git fetch origin
+
+<span class="command-comment"># Check remote branch info</span>
+git remote show origin
+
+<span class="command-comment"># Create local branch from remote</span>
+git checkout -b dev origin/dev</pre>
             </div>
             
         </div>

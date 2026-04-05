@@ -444,7 +444,22 @@
 <span class="command-comment"># public static $wrap = 'post';</span>
 
 <span class="command-comment"># Test resource output in Tinker</span>
-sail artisan tinker --execute="new PostResource(Post::first())"</pre>
+sail artisan tinker --execute="new PostResource(Post::first())"
+
+<span class="command-comment"># Add conditional metadata</span>
+<span class="command-comment"># $this->when($request->user()->isAdmin(), ['key' => 'val'])</span>
+
+<span class="command-comment"># Merge attributes conditionally</span>
+<span class="command-comment"># $this->mergeWhen($this->is_admin, ['role' => 'admin'])</span>
+
+<span class="command-comment"># Transform value into Resource</span>
+<span class="command-comment"># 'tags' => TagResource::collection($this->whenLoaded('tags'))</span>
+
+<span class="command-comment"># Accessing request in resource</span>
+<span class="command-comment"># $request->user()</span>
+
+<span class="command-comment"># Customizing root wrap</span>
+<span class="command-comment"># PostResource::wrap('articles');</span></pre>
             </div>
             
         </div>

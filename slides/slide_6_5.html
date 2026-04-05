@@ -444,7 +444,22 @@ docker stats
 docker system prune -a
 
 <span class="command-comment"># List container networks</span>
-docker network ls</pre>
+docker network ls
+
+<span class="command-comment"># Check Docker disk usage</span>
+docker system df
+
+<span class="command-comment"># Inspect production container</span>
+docker inspect <id>
+
+<span class="command-comment"># Export production logs</span>
+docker logs <id> > prod_logs.txt
+
+<span class="command-comment"># Run security audit on Dockerfile</span>
+docker scan my-app:prod
+
+<span class="command-comment"># List images by tag</span>
+docker images --filter "reference=my-app:*"</pre>
             </div>
             
         </div>

@@ -444,7 +444,22 @@ sail artisan migrate --force
 sail artisan migrate:fresh
 
 <span class="command-comment"># Check for uncommitted migrations</span>
-sail artisan migrate:status</pre>
+sail artisan migrate:status
+
+<span class="command-comment"># Squash migrations into single SQL file</span>
+sail artisan schema:dump
+
+<span class="command-comment"># Prune old migration files after squash</span>
+sail artisan schema:dump --prune
+
+<span class="command-comment"># Seed after fresh</span>
+sail artisan migrate:fresh --seed
+
+<span class="command-comment"># Reset specific steps</span>
+sail artisan migrate:reset --step=1
+
+<span class="command-comment"># Run migrations without output</span>
+sail artisan migrate -q</pre>
             </div>
             
         </div>

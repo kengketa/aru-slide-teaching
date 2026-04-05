@@ -444,7 +444,22 @@ sail artisan list
 sail composer install
 
 <span class="command-comment"># Stop all Sail services</span>
-sail down</pre>
+sail down
+
+<span class="command-comment"># Permanent alias (macOS/Zsh)</span>
+echo "alias sail='./vendor/bin/sail'" >> ~/.zshrc
+
+<span class="command-comment"># Permanent alias (Ubuntu/Bash)</span>
+echo "alias sail='./vendor/bin/sail'" >> ~/.bashrc
+
+<span class="command-comment"># Reload shell config</span>
+source ~/.zshrc
+
+<span class="command-comment"># Check if alias exists</span>
+alias sail
+
+<span class="command-comment"># Remove an alias</span>
+unalias sail</pre>
             </div>
             
         </div>

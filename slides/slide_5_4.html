@@ -444,7 +444,22 @@
 <span class="command-comment"># $post->forceDelete();</span>
 
 <span class="command-comment"># Query including trashed records</span>
-<span class="command-comment"># Post::withTrashed()->get();</span></pre>
+<span class="command-comment"># Post::withTrashed()->get();</span>
+
+<span class="command-comment"># Query ONLY trashed records</span>
+<span class="command-comment"># Post::onlyTrashed()->get();</span>
+
+<span class="command-comment"># Check if record is trashed</span>
+<span class="command-comment"># $post->trashed();</span>
+
+<span class="command-comment"># Restore all trashed records</span>
+<span class="command-comment"># Post::onlyTrashed()->restore();</span>
+
+<span class="command-comment"># Permanently delete all trashed</span>
+<span class="command-comment"># Post::onlyTrashed()->forceDelete();</span>
+
+<span class="command-comment"># Create migration for soft deletes</span>
+sail artisan make:migration add_soft_deletes_to_posts --table=posts</pre>
             </div>
             
         </div>

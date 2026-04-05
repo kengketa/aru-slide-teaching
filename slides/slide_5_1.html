@@ -443,7 +443,22 @@ touch routes/api.php
 <span class="command-comment"># Test API with curl</span>
 curl http://localhost/api/posts
 
-<span class="command-comment"># Use Postman/Insomnia to test endpoints</span></pre>
+<span class="command-comment"># Use Postman/Insomnia to test endpoints</span>
+
+<span class="command-comment"># Filter routes by name</span>
+sail artisan route:list --name=posts
+
+<span class="command-comment"># Check route middleware</span>
+sail artisan route:list --columns=method,uri,name,middleware
+
+<span class="command-comment"># Cache API routes</span>
+sail artisan route:cache
+
+<span class="command-comment"># Clear route cache</span>
+sail artisan route:clear
+
+<span class="command-comment"># Show specific route info</span>
+sail artisan route:show api/posts</pre>
             </div>
             
         </div>

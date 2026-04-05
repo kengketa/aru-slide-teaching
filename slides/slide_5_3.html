@@ -444,7 +444,22 @@ sail artisan make:migration create_post_tag_table
 <span class="command-comment"># Post::with('category')->get();</span>
 
 <span class="command-comment"># Check relationship existence</span>
-<span class="command-comment"># $post->category()->exists();</span></pre>
+<span class="command-comment"># $post->category()->exists();</span>
+
+<span class="command-comment"># Count related records</span>
+<span class="command-comment"># Post::withCount('comments')->get();</span>
+
+<span class="command-comment"># Filter by relationship</span>
+<span class="command-comment"># Post::has('comments')->get();</span>
+
+<span class="command-comment"># Filter by relationship content</span>
+<span class="command-comment"># Post::whereHas('comments', function($q) { ... })->get();</span>
+
+<span class="command-comment"># Load missing relationships</span>
+<span class="command-comment"># $post->loadMissing('author');</span>
+
+<span class="command-comment"># Define Polymorphic relationship</span>
+<span class="command-comment"># return $this->morphMany(Comment::class, 'commentable');</span></pre>
             </div>
             
         </div>

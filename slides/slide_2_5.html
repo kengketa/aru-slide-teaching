@@ -444,7 +444,22 @@ sail artisan key:generate
 sail shell -c "env"
 
 <span class="command-comment"># Restart Sail to apply .env changes</span>
-sail restart</pre>
+sail restart
+
+<span class="command-comment"># View current .env content</span>
+cat .env
+
+<span class="command-comment"># Clear config cache</span>
+sail artisan config:clear
+
+<span class="command-comment"># Cache config for performance</span>
+sail artisan config:cache
+
+<span class="command-comment"># List all Artisan configurations</span>
+sail artisan config:show
+
+<span class="command-comment"># Edit .env file (inside terminal)</span>
+nano .env</pre>
             </div>
             
         </div>

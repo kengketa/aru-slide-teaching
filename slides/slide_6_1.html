@@ -444,7 +444,22 @@ npm install axios
 <span class="command-comment"># axios.defaults.baseURL = 'http://localhost/api';</span>
 
 <span class="command-comment"># Intercept requests for auth</span>
-<span class="command-comment"># axios.interceptors.request.use(config => { ... })</span></pre>
+<span class="command-comment"># axios.interceptors.request.use(config => { ... })</span>
+
+<span class="command-comment"># Use async/await for requests</span>
+<span class="command-comment"># const res = await axios.get('/api/posts');</span>
+
+<span class="command-comment"># Cancel requests (AbortController)</span>
+<span class="command-comment"># const controller = new AbortController();</span>
+
+<span class="command-comment"># Global Axios configuration</span>
+<span class="command-comment"># axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';</span>
+
+<span class="command-comment"># Handle 401 Unauthorized globally</span>
+<span class="command-comment"># axios.interceptors.response.use(...)</span>
+
+<span class="command-comment"># Fetch with params</span>
+<span class="command-comment"># axios.get('/api/posts', { params: { page: 1 } })</span></pre>
             </div>
             
         </div>

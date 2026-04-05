@@ -444,7 +444,22 @@ ab -n 100 -c 10 http://localhost/api/posts
 <span class="command-comment"># GET /api/posts?page=2</span>
 
 <span class="command-comment"># Set default pagination limit in model</span>
-<span class="command-comment"># protected $perPage = 15;</span></pre>
+<span class="command-comment"># protected $perPage = 15;</span>
+
+<span class="command-comment"># Simple pagination (next/prev only)</span>
+<span class="command-comment"># Post::paginate(15)->simplePaginate(15);</span>
+
+<span class="command-comment"># Cursor pagination (for large datasets)</span>
+<span class="command-comment"># Post::cursorPaginate(15);</span>
+
+<span class="command-comment"># Customizing pagination view</span>
+sail artisan vendor:publish --tag=laravel-pagination
+
+<span class="command-comment"># Appending to pagination links</span>
+<span class="command-comment"># $posts->appends(['sort' => 'votes']);</span>
+
+<span class="command-comment"># Checking total records in Tinker</span>
+sail artisan tinker --execute="Post::count();"</pre>
             </div>
             
         </div>

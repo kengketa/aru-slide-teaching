@@ -444,7 +444,22 @@ git stash apply
 git stash list
 
 <span class="command-comment"># Clear all stashes</span>
-git stash clear</pre>
+git stash clear
+
+<span class="command-comment"># Stash with a message</span>
+git stash save "working on auth"
+
+<span class="command-comment"># Stash specific file</span>
+git stash push path/to/file.php
+
+<span class="command-comment"># Create branch from stash</span>
+git stash branch new-branch-name
+
+<span class="command-comment"># View stash diff</span>
+git stash show -p
+
+<span class="command-comment"># Drop specific stash</span>
+git stash drop stash@{0}</pre>
             </div>
             
         </div>

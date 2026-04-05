@@ -444,7 +444,22 @@ sail artisan make:resource PostCollection
 <span class="command-comment"># JsonResource::withoutWrapping();</span>
 
 <span class="command-comment"># Add meta data to response</span>
-<span class="command-comment"># return $resource->additional(['meta' => 'data']);</span></pre>
+<span class="command-comment"># return $resource->additional(['meta' => 'data']);</span>
+
+<span class="command-comment"># Customize resource response headers</span>
+<span class="command-comment"># $resource->toResponse($request)->header('X-Value', 'True');</span>
+
+<span class="command-comment"># Use resource for collections</span>
+<span class="command-comment"># PostResource::collection(Post::all());</span>
+
+<span class="command-comment"># Create anonymous resource collection</span>
+<span class="command-comment"># PostResource::collection($posts);</span>
+
+<span class="command-comment"># Transform attributes in resource</span>
+<span class="command-comment"># 'created_at' => $this->created_at->format('Y-m-d')</span>
+
+<span class="command-comment"># Include nested resources</span>
+<span class="command-comment"># 'user' => new UserResource($this->user)</span></pre>
             </div>
             
         </div>
