@@ -44,3 +44,15 @@ To change the content of the slides:
    - `Slide [Number]: [Content]`
 2. Re-run `generate_slides.py`.
 3. If you need to add specific commands or detailed info to a new slide, update the `slide_details` dictionary within `generate_slides.py` using the `"DayNumber_SlideNumber"` key format.
+
+## Commit Guidelines
+
+When making changes to this repository, please follow the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) specification. Use the following prefixes for your commit messages:
+
+- **`feat:`**: A new feature (e.g., adding a new slide or a new component).
+- **`fix:`**: A bug fix (e.g., correcting a typo in a slide).
+- **`chore:`**: Regular maintenance tasks (e.g., updating dependencies or `.gitignore`).
+- **`docs:`**: Documentation-only changes (e.g., updating `junie.md`).
+- **`refactor:`**: A code change that neither fixes a bug nor adds a feature.
+- **`style:`**: Changes that do not affect the meaning of the code (white-space, formatting, etc.).
+- **`test:`**: Adding missing tests or correcting existing tests.
