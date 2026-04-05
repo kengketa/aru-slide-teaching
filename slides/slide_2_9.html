@@ -415,11 +415,11 @@
     <main>
         <div class="slide-container">
             <span class="slide-number">Slide 9</span>
-            <h1>Debugging Pro: การอ่าน Error Logs และการใช้ Xdebug เพื่อตรวจสอบการทำงานของโค้ดทีละบรรทัด</h1>
+            <h1>How to use dd(): การใช้ dd() (Dump and Die) เพื่อตรวจสอบการทำงานของโค้ดและไล่เลี่ยดูข้อมูลในตัวแปร</h1>
 
             <div class="info-container">
                 <div class="info-text">
-                    Debug like a pro using Xdebug within Sail. Monitor logs with 'sail logs' to quickly identify and fix issues in your code.
+                    Learn how to use dd() (Dump and Die) for quick debugging in Laravel. It's a powerful tool to dump variables and stop execution to inspect data at any point in your code.
                 </div>
                 <div class="info-icon">
                     <svg width="100%" height="100%" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24">
@@ -431,20 +431,21 @@
             
             <div class="command-container">
                 <div class="command-header">Example Commands</div>
-                <pre class="command-text"><span class="command-comment"># Follow Sail logs in real-time</span>
-sail logs -f
+                <pre class="command-text"><span class="command-comment"># Dump a single variable</span>
+dd($user);
 
-<span class="command-comment"># Interactive PHP shell (Tinker)</span>
+<span class="command-comment"># Dump multiple variables</span>
+dd($user, $request->all(), $settings);
+
+<span class="command-comment"># Use in Blade templates</span>
+<span class="command-comment"># @dd($variable)</span>
+
+<span class="command-comment"># Use within Artisan Tinker</span>
 sail artisan tinker
+>>> dd(User::first());
 
-<span class="command-comment"># Tail Laravel log file</span>
-sail shell -c "tail -f storage/logs/laravel.log"
-
-<span class="command-comment"># Run tests with coverage</span>
-sail test --coverage
-
-<span class="command-comment"># Verify PHP extensions</span>
-sail php -m</pre>
+<span class="command-comment"># Monitor Laravel logs</span>
+sail shell -c "tail -f storage/logs/laravel.log"</pre>
             </div>
             
         </div>
